@@ -66,7 +66,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="TdL-HN-Ou3"/>
+                                    <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="TdL-HN-Ou3"/>
                                     <segue destination="Ocn-H8-lYA" kind="presentation" modalPresentationStyle="fullScreen" id="cp1-yd-gIF"/>
                                 </connections>
                             </button>
