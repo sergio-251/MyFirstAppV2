@@ -12,8 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var enterNameTF: UITextField!
     @IBOutlet var enterPasswordTF: UITextField!
     
-    private let defaultUserName = "Simple"
-    private let defaultUserPassword = "1111"
+    let currentPerson = Person.getAnyPerson()
 
     @IBAction func logInButtonPressed() {
         if !isCorrectInput() {
@@ -26,7 +25,7 @@ class LoginViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {
             return
         }
-        welcomeVC.nameUser = defaultUserName
+        welcomeVC.nameUser = currentPerson.user.login
         
     }
     
@@ -35,9 +34,9 @@ class LoginViewController: UIViewController {
     @IBAction func forgotButtonPressed(_ sender: UIButton) {
         var resultMessage = ""
         if sender.restorationIdentifier == "ForgotNameButton" {
-            resultMessage = "Your login is \n\(defaultUserName)"
+            resultMessage = "Your login is \n\(currentPerson.user.login)"
         } else {
-            resultMessage = "Your password is \n\(defaultUserPassword)"
+            resultMessage = "Your password is \n\(currentPerson.user.password)"
         }
         showAlert(title: "Oooops...", message: resultMessage)
         }
@@ -64,13 +63,13 @@ extension LoginViewController {
         guard let currentName = enterNameTF.text, currentName != "" else {
             return false
         }
-        return currentName == defaultUserName
+        return currentName == currentPerson.user.login
     }
     
     private func isCorrectPassword() -> Bool {
         guard let currentPassword = enterPasswordTF.text,
                 currentPassword != "" else { return false}
-        return currentPassword == defaultUserPassword
+        return currentPassword == currentPerson.user.password
     }
     
     private func showAlert(
