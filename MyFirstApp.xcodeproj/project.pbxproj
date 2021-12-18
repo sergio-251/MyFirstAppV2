@@ -15,6 +15,9 @@
 		B76CA669276B787F00CEE7BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76CA667276B787F00CEE7BC /* LaunchScreen.storyboard */; };
 		B76CA671276B960700CEE7BC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CA670276B960700CEE7BC /* WelcomeViewController.swift */; };
 		B7C2DD21276E244C003A28A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2DD20276E244C003A28A4 /* User.swift */; };
+		B7C2DD24276E329B003A28A4 /* InfoUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2DD23276E329B003A28A4 /* InfoUserViewController.swift */; };
+		B7C2DD26276E4FE5003A28A4 /* MoreInfoUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2DD25276E4FE5003A28A4 /* MoreInfoUserViewController.swift */; };
+		B7C2DD28276E5244003A28A4 /* MyPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C2DD27276E5244003A28A4 /* MyPhoto.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		B76CA66A276B787F00CEE7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76CA670276B960700CEE7BC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B7C2DD20276E244C003A28A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B7C2DD23276E329B003A28A4 /* InfoUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserViewController.swift; sourceTree = "<group>"; };
+		B7C2DD25276E4FE5003A28A4 /* MoreInfoUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoUserViewController.swift; sourceTree = "<group>"; };
+		B7C2DD27276E5244003A28A4 /* MyPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MyPhoto.png; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/MyPhoto.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +51,9 @@
 			isa = PBXGroup;
 			children = (
 				B76CA660276B787D00CEE7BC /* LoginViewController.swift */,
+				B7C2DD23276E329B003A28A4 /* InfoUserViewController.swift */,
 				B76CA670276B960700CEE7BC /* WelcomeViewController.swift */,
+				B7C2DD25276E4FE5003A28A4 /* MoreInfoUserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -63,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				B76CA665276B787F00CEE7BC /* Assets.xcassets */,
+				B7C2DD27276E5244003A28A4 /* MyPhoto.png */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -173,6 +182,7 @@
 			files = (
 				B76CA669276B787F00CEE7BC /* LaunchScreen.storyboard in Resources */,
 				B76CA666276B787F00CEE7BC /* Assets.xcassets in Resources */,
+				B7C2DD28276E5244003A28A4 /* MyPhoto.png in Resources */,
 				B76CA664276B787D00CEE7BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,8 +195,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B76CA661276B787D00CEE7BC /* LoginViewController.swift in Sources */,
+				B7C2DD26276E4FE5003A28A4 /* MoreInfoUserViewController.swift in Sources */,
 				B76CA671276B960700CEE7BC /* WelcomeViewController.swift in Sources */,
 				B76CA65D276B787D00CEE7BC /* AppDelegate.swift in Sources */,
+				B7C2DD24276E329B003A28A4 /* InfoUserViewController.swift in Sources */,
 				B7C2DD21276E244C003A28A4 /* User.swift in Sources */,
 				B76CA65F276B787D00CEE7BC /* SceneDelegate.swift in Sources */,
 			);
