@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,13 +13,13 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LoginView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="147" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-z4-6CE">
-                                <rect key="frame" x="39" y="355" width="335" height="23.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-z4-6CE">
+                                <rect key="frame" x="25" y="311" width="270" height="23.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="ForgotNameButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diH-w0-IKH">
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="ForgotNameButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diH-w0-IKH">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="23.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button">
@@ -35,8 +35,8 @@
                                             <action selector="forgotButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O3j-28-jKU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WOa-r2-Qmi">
-                                        <rect key="frame" x="232" y="0.0" width="103" height="23.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WOa-r2-Qmi">
+                                        <rect key="frame" x="167" y="0.0" width="103" height="23.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button">
                                             <attributedString key="attributedTitle">
@@ -54,7 +54,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vth-Rs-cKF">
-                                <rect key="frame" x="161" y="282" width="92.5" height="43"/>
+                                <rect key="frame" x="114" y="238" width="92.5" height="43"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -67,21 +67,27 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="TdL-HN-Ou3"/>
-                                    <segue destination="Ocn-H8-lYA" kind="presentation" modalPresentationStyle="fullScreen" id="cp1-yd-gIF"/>
+                                    <segue destination="Ocn-H8-lYA" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="cp1-yd-gIF"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SHG-rC-S9s">
-                                <rect key="frame" x="25" y="144" width="364" height="98"/>
+                                <rect key="frame" x="25" y="100" width="270" height="98"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bMX-rH-gXd">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="S2B-yC-6VC"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiM-PZ-4sX">
-                                        <rect key="frame" x="0.0" y="64" width="364" height="34"/>
+                                        <rect key="frame" x="0.0" y="64" width="270" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Vtx-bK-jS3"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -90,12 +96,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="SHG-rC-S9s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="33H-u4-0fa"/>
-                            <constraint firstItem="eSg-z4-6CE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="7kt-rW-Vba"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSg-z4-6CE" secondAttribute="trailing" constant="25" id="A29-Bi-hpf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SHG-rC-S9s" secondAttribute="trailing" constant="25" id="CZc-ih-6w2"/>
+                            <constraint firstItem="eSg-z4-6CE" firstAttribute="top" secondItem="vth-Rs-cKF" secondAttribute="bottom" constant="30" id="Cln-EO-tL6"/>
+                            <constraint firstItem="eSg-z4-6CE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="SgQ-Bq-8T3"/>
                             <constraint firstItem="vth-Rs-cKF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TJr-RG-AS3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSg-z4-6CE" secondAttribute="trailing" constant="40" id="WNh-fB-aUd"/>
                             <constraint firstItem="vth-Rs-cKF" firstAttribute="top" secondItem="SHG-rC-S9s" secondAttribute="bottom" constant="40" id="qvE-N4-OAz"/>
-                            <constraint firstItem="eSg-z4-6CE" firstAttribute="top" secondItem="vth-Rs-cKF" secondAttribute="bottom" constant="30" id="sw0-mV-CzK"/>
                             <constraint firstItem="SHG-rC-S9s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="uhf-Py-gdK"/>
                         </constraints>
                     </view>
@@ -106,18 +112,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
+            <point key="canvasLocation" x="18.75" y="85.563380281690144"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="YPl-Gp-nS9">
             <objects>
                 <viewController id="Ocn-H8-lYA" customClass="WelcomeViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1nr-gv-0Tb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZX-Xw-qZS">
-                                <rect key="frame" x="153.5" y="426.5" width="107.5" height="43"/>
+                                <rect key="frame" x="106.5" y="262.5" width="107.5" height="43"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -133,7 +139,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ylz-ot-HbY">
-                                <rect key="frame" x="54" y="89" width="103" height="49"/>
+                                <rect key="frame" x="54" y="45" width="103" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkZ-CA-JFE">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -147,13 +153,15 @@
                                         <color key="textColor" red="0.89232248067855835" green="0.94755750894546509" blue="0.97043174505233765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="tbh-BZ-iBe"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ype-lP-Ql6"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <color key="tintColor" red="0.89232248067855835" green="0.94755750894546509" blue="0.97043174505233765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ype-lP-Ql6" firstAttribute="bottom" secondItem="ylz-ot-HbY" secondAttribute="bottom" constant="724" id="0oh-WP-Cjy"/>
                             <constraint firstItem="ylz-ot-HbY" firstAttribute="leading" secondItem="Ype-lP-Ql6" secondAttribute="leading" constant="54" id="3Xo-rz-yuf"/>
                             <constraint firstItem="WZX-Xw-qZS" firstAttribute="centerY" secondItem="1nr-gv-0Tb" secondAttribute="centerY" id="Ap6-rD-L44"/>
                             <constraint firstItem="WZX-Xw-qZS" firstAttribute="centerX" secondItem="1nr-gv-0Tb" secondAttribute="centerX" id="Yyq-Na-dae"/>

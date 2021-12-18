@@ -9,7 +9,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-
     @IBOutlet var enterNameTF: UITextField!
     @IBOutlet var enterPasswordTF: UITextField!
     
@@ -23,10 +22,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func forgotButtonPressed(_ sender: UIButton) {
-        showForgotAlert(for: sender)
-        }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {
             return
@@ -35,6 +30,18 @@ class LoginViewController: UIViewController {
         
     }
     
+   
+    
+    @IBAction func forgotButtonPressed(_ sender: UIButton) {
+        var resultMessage = ""
+        if sender.restorationIdentifier == "ForgotNameButton" {
+            resultMessage = "Your login is \n\(defaultUserName)"
+        } else {
+            resultMessage = "Your password is \n\(defaultUserPassword)"
+        }
+        showAlert(title: "Oooops...", message: resultMessage)
+        }
+    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         guard let loginVC = segue.destination as? LoginViewController else {
             return
@@ -42,28 +49,10 @@ class LoginViewController: UIViewController {
         loginVC.enterNameTF.text = ""
         loginVC.enterPasswordTF.text = ""
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
 }
 
 // MARK: - Private Methods
 extension LoginViewController {
-    private func showForgotAlert(for button: UIButton) {
-        button.restorationIdentifier == "ForgotNameButton"
-        ? showAlert(
-            title: "Ohhh...",
-            message: "Your login is \n\(defaultUserName)"
-        )
-        : showAlert(
-            title: "Ooooops...",
-            message: "Your password is \n\(defaultUserPassword)"
-        )
-    }
-
-    
     private func showWrongNamePass() {
             showAlert(
                 title: "Wrong name or password",
@@ -85,8 +74,8 @@ extension LoginViewController {
     }
     
     private func showAlert(
-        title: String,
-        message: String,
+        title: String = "",
+        message: String = "",
         buttonType: String = "OK"
     ) {
         let alert = UIAlertController(
@@ -101,8 +90,25 @@ extension LoginViewController {
     private func isCorrectInput() -> Bool {
         isCorrectName() && isCorrectPassword()
     }
-    
-   
 }
+
+// MARK: - UITextViewDelegate
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == enterNameTF {
+            enterPasswordTF.becomeFirstResponder()
+        } else {
+            logInButtonPressed()
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        }
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+}
+
 
 
