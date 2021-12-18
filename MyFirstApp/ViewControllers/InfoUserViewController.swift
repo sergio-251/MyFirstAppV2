@@ -21,8 +21,7 @@ class InfoUserViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let moreInfoVC = segue.destination as! MoreInfoUserViewController
-        moreInfoVC.name = "Name"
-        moreInfoVC.nameValue = currentPerson.name
+        moreInfoVC.currentUser = currentPerson
     }
 
 }

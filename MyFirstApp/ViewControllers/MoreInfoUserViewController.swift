@@ -9,17 +9,19 @@ import UIKit
 
 class MoreInfoUserViewController: UIViewController {
 
-    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var nameValueLabel: UILabel!
+    @IBOutlet var surnameValueLabel: UILabel!
+    @IBOutlet var ageValueLabel: UILabel!
+    @IBOutlet var loginValueLabel: UILabel!
     
-    var name: String!
-    var nameValue: String!
+    var currentUser: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = name
-        nameValueLabel.text = nameValue
-    
+        nameValueLabel.text = currentUser.name
+        surnameValueLabel.text = currentUser.surname
+        ageValueLabel.text = String(currentUser.age)
+        loginValueLabel.text = currentUser.user.login
     }
     
 
