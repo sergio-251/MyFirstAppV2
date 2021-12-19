@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var enterNameTF: UITextField!
     @IBOutlet var enterPasswordTF: UITextField!
     
-    let currentPerson = Person.getAnyPerson()
+    private let currentPerson = Person.getAnyPerson()
 
     @IBAction func logInButtonPressed() {
         if !isCorrectInput() {
@@ -30,7 +30,6 @@ class LoginViewController: UIViewController {
             } else if let navigationVC = viewController as? UINavigationController {
                 let infoUserVC = navigationVC.topViewController as? InfoUserViewController
                 viewController.tabBarItem.title = "\(currentPerson.name) \(currentPerson.surname)"
-                infoUserVC?.descriptionUser = currentPerson.description
                 infoUserVC?.currentPerson = currentPerson
             }
         }
@@ -49,11 +48,8 @@ class LoginViewController: UIViewController {
         }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let loginVC = segue.destination as? LoginViewController else {
-            return
-        }
-        loginVC.enterNameTF.text = ""
-        loginVC.enterPasswordTF.text = ""
+        enterNameTF.text = ""
+        enterPasswordTF.text = ""
     }
 }
 
